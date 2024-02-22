@@ -17,6 +17,8 @@ vim.cmd("set splitbelow")
 vim.cmd("set colorcolumn=80")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.cmd("let g:user42 = 'vstineau'")
+vim.cmd("let g:mail42 = 'vstineau@student.42.fr'")
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>h", "<C-W>h", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>j", "<C-W>j", { noremap = true })

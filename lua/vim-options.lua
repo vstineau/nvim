@@ -29,3 +29,5 @@ vim.api.nvim_set_keymap("n", "<leader>s", "<C-W>s", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>th", ":ToggleTerm<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tv", ":vert term<CR>i", { noremap = true })
 vim.api.nvim_set_keymap("t", "<esc>", "<LeftMouse>", { noremap = true })
+vim.opt.listchars = 'tab:▸ ,trail:·'
+vim.opt.list = true

@@ -31,3 +31,4 @@ vim.api.nvim_set_keymap("n", "<leader>tv", ":vert term<CR>i", { noremap = true }
 vim.api.nvim_set_keymap("t", "<esc>", "<LeftMouse>", { noremap = true })
 vim.opt.listchars = 'tab:▸ ,trail:·'
 vim.opt.list = true
+

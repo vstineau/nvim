@@ -16,9 +16,8 @@ return {
  	{
  		'neovim/nvim-lspconfig',
  		config = function()
+			local coq = require ("coq"); 			lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({}))
  			local lspconfig = require("lspconfig")
-			local coq = require ("coq");
- 			lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.clangd.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.bashls.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.pyright.setup(coq.lsp_ensure_capabilities({}))

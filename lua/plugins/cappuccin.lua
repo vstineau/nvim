@@ -29,9 +29,9 @@ return {
 					base = "#000000",
 					mantle = "#000000",
 					crust = "#000000",
-					surface1 = "#C97778", --tab & number color
 					overlay0 = "#B4BEC2", --comment color
 					red = "#C92836",
+				--surface1 = "#C97778", --tab & number color
 				--	sapphire = "#C92836",
 				--	rosewater = "#C92836",
 				--	green = "#1F7301",

@@ -33,3 +33,12 @@ vim.api.nvim_set_keymap("n", "<leader>tv", "<C-W>v :vert term<CR>i", { noremap =
 vim.api.nvim_set_keymap("t", "<esc>", "<LeftMouse>", { noremap = true })
 vim.opt.listchars = 'tab:▸ ,trail:#'
 vim.opt.list = true
+
+if vim.fn.executable('xclip') == 1 then
+  vim.o.clipboard = 'unnamedplus'
+end
+
+if vim.fn.executable('xsel') == 1 then
+  vim.o.clipboard = 'unnamedplus'
+end
+

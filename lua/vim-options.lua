@@ -34,6 +34,11 @@ vim.api.nvim_set_keymap("t", "<esc>", "<LeftMouse>", { noremap = true })
 vim.opt.listchars = 'tab:▸ ,trail:#'
 vim.opt.list = true
 
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
+vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true })
+vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true })
+
 if vim.fn.executable('xclip') == 1 then
   vim.o.clipboard = 'unnamedplus'
 end

@@ -12,5 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.listchars = 'tab:→ ,trail:·'
 vim.opt.rtp:prepend(lazypath)
+require("construct_class")
 require("vim-options")
 require("lazy").setup("plugins")

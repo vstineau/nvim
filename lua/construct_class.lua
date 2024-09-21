@@ -12,7 +12,9 @@ function Class(opts)
 		"",
 		"public:",
 		"	"..opts.fargs[1].."();",
+		"	"..opts.fargs[1].."(const "..opts.fargs[1].."&);",
 		"	~"..opts.fargs[1].."();",
+		"	"..opts.fargs[1].." &operator=(const "..opts.fargs[1].."&);",
 		"",
 		"private:",
 		"};",
@@ -32,6 +34,12 @@ function Class(opts)
 		"{}",
 		"",
 		opts.fargs[1] .. "::" .. "~" .. opts.fargs[1] .."()",
+		"{}",
+		"",
+		opts.fargs[1] .. "::" .. opts.fargs[1] .."(const "..opts.fargs[1].."&)",
+		"{}",
+		"",
+		opts.fargs[1] .. "& " .. opts.fargs[1] .."::operator=(const "..opts.fargs[1].."&)",
 		"{}",
 		""
 	}

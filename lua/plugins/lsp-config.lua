@@ -10,7 +10,7 @@ return {
  		config = function()
 			require("mason").setup()
  			require("mason-lspconfig").setup({
- 				ensure_installed = { "lua_ls", "clangd", "bashls", "pyright", "ts_ls", "rust_analyzer" },
+ 				ensure_installed = { "lua_ls", "clangd", "bashls", "pyright", "ts_ls", "rust_analyzer", "dockerls", "docker_compose_language_service"},
  			})
  		end
  	},
@@ -25,6 +25,8 @@ return {
  			lspconfig.pyright.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.ts_ls.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.rust_analyzer.setup(coq.lsp_ensure_capabilities({}))
+ 			lspconfig.dockerls.setup(coq.lsp_ensure_capabilities({}))
+ 			lspconfig.docker_compose_language_service.setup(coq.lsp_ensure_capabilities({}))
 
 			vim.g.coq_settings = {
 				keymap = {

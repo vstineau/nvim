@@ -10,7 +10,7 @@ return {
  		config = function()
 			require("mason").setup()
  			require("mason-lspconfig").setup({
- 				ensure_installed = { "lua_ls", "clangd", "bashls", "pyright", "ts_ls", "rust_analyzer", "dockerls", "docker_compose_language_service"},
+ 				ensure_installed = { "lua_ls", "clangd", "bashls", "pyright", "ts_ls", "rust_analyzer", "dockerls", "docker_compose_language_service", "html"},
  			})
  		end
  	},
@@ -20,6 +20,7 @@ return {
 			local coq = require ("coq");
  			local lspconfig = require("lspconfig")
  			lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({}))
+ 			lspconfig.html.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.clangd.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.bashls.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.pyright.setup(coq.lsp_ensure_capabilities({}))

@@ -6,13 +6,23 @@ return {
  	end
  	},
  	{
- 		'williamboman/mason-lspconfig.nvim',
- 		config = function()
+		'williamboman/mason-lspconfig.nvim',
+		config = function()
 			require("mason").setup()
- 			require("mason-lspconfig").setup({
- 				ensure_installed = { "lua_ls", "clangd", "bashls", "pyright", "ts_ls", "rust_analyzer", "dockerls", "docker_compose_language_service"},
- 			})
- 		end
+			require("mason-lspconfig").setup({
+			ensure_installed = {
+				"lua_ls",
+				"clangd",
+				"bashls",
+		   		"pyright",
+		   		"ts_ls",
+		   		"rust_analyzer",
+		   		"dockerls",
+		   		"docker_compose_language_service"
+		  },
+		  automatic_installation = true, 
+		})
+		end
  	},
  	{
  		'neovim/nvim-lspconfig',

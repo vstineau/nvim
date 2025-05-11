@@ -30,6 +30,7 @@ return {
 			local coq = require ("coq");
  			local lspconfig = require("lspconfig")
  			lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({}))
+ 			lspconfig.html.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.clangd.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.bashls.setup(coq.lsp_ensure_capabilities({}))
  			lspconfig.pyright.setup(coq.lsp_ensure_capabilities({}))

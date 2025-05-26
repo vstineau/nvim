@@ -1,6 +1,8 @@
 return {
  	{
  		"williamboman/mason.nvim",
+		version = "v1.29.0",
+		dependencies = { "williamboman/mason.nvim" },
  	config = function()
  		require("mason").setup()
  	end
@@ -8,7 +10,6 @@ return {
  	{
 		'williamboman/mason-lspconfig.nvim',
 		config = function()
-			require("mason").setup()
 			require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
@@ -20,7 +21,7 @@ return {
 		   		"dockerls",
 		   		"docker_compose_language_service"
 		  },
-		  automatic_installation = true, 
+		  automatic_installation = true,
 		})
 		end
  	},

@@ -30,6 +30,7 @@ vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true
 vim.api.nvim_set_keymap('n', '<leader>Y', '"+Y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>th", ":ToggleTerm<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>tv", "<C-W>v :vert term<CR>i", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>o", ":tabe<CR>", { noremap = true })
 vim.api.nvim_set_keymap("t", "<esc>", "<LeftMouse>", { noremap = true })
 
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })

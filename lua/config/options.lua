@@ -16,5 +16,10 @@ vim.cmd("set mouse=a")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 vim.cmd("set colorcolumn=100")
-vim.diagnostic.config({ virtual_lines = true })
+vim.diagnostic.config({
+	virtual_lines = true,
+	signs = true,
+	virtual_text = true,
+	underline = true,
+})
 vim.opt.winborder = "solid" -- https://neovim.io/doc/user/options.html#'winborder'

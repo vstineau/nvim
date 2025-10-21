@@ -17,9 +17,10 @@ vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 vim.cmd("set colorcolumn=100")
 vim.diagnostic.config({
-	virtual_lines = true,
-	signs = true,
-	virtual_text = true,
-	underline = true,
+  signs = true,           -- afficher les signes
+  virtual_text = true,    -- afficher le texte virtuel
+  underline = true,       -- souligner le texte
+  update_in_insert = false, -- ne pas mettre à jour en mode insert
+  severity_sort = true,     -- trier par sévérité
 })
 vim.opt.winborder = "solid" -- https://neovim.io/doc/user/options.html#'winborder'
